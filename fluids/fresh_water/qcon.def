@@ -1,0 +1,4 @@
+998.2     ! rho (kg/m^3)   fresh water @ ~20C
+1.002e-3  ! mu  (kg/m-s)   dynamic viscosity @ ~20C
+1482      ! a   (m/s)      speed of sound in water @ ~20C (not very important here)
+
