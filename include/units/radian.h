@@ -3,6 +3,8 @@
 struct Radian {
   double val; 
 
+  constexpr explicit Radian(double val_) : val(val_){  } 
+
   Radian& operator+=(const Radian& other){
     val += other.val;
     return *this;

@@ -11,8 +11,6 @@ int main(){
     1, 1, 1 
   }));//.reshape(1,3);
   mask = mask.reshape(1, 3);
-  std::cout << mask << std::endl;
-  std::cout << (mask.type() == CV_8UC1) << std::endl;
   
   auto blurred_mask = cv::Mat_<double>();
   cv::boxFilter(
@@ -24,20 +22,25 @@ int main(){
     true,
     cv::BORDER_CONSTANT
   );
+
+  std::cout << mask << std::endl;
+  std::cout << (mask.type() == CV_8UC1) << std::endl;
+
   std::cout << blurred_mask << std::endl;
   std::cout << blurred_mask.type() << std::endl;
 
   cv::threshold(
     blurred_mask,
-    mask,
+    blurred_mask,
     .5,
     255.0,
     cv::THRESH_BINARY
   );
   
+  
 
-  std::cout << mask << std::endl;
-  std::cout << (mask.type()) << std::endl;
+  std::cout << blurred_mask << std::endl;
+  std::cout << (blurred_mask.type()) << std::endl;
 
   return 0;
 }
