@@ -2,6 +2,8 @@
 
 #include <cmath>
 
+namespace geom { 
+
 struct TrigInfo{
   Radian theta;
   double cos;
@@ -15,3 +17,5 @@ TrigInfo get_trig_info(Radian theta){
     .sin = std::sin(theta.val)
   }
 }
+
+} // namespace geom 
